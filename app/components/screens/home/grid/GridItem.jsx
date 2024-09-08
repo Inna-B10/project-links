@@ -1,4 +1,4 @@
-const GridItem = () => {
+const GridItem = ({ item }) => {
 	return <div>GridItem</div>
 }
 

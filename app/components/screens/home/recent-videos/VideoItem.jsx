@@ -1,4 +1,4 @@
-const VideoItem = () => {
+const VideoItem = ({ item }) => {
 	return <div>VideoItem</div>
 }
 

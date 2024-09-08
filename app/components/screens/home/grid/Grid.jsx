@@ -1,4 +1,4 @@
-const Grid = () => {
+const Grid = ({ links }) => {
 	return <div>Grid</div>
 }
 

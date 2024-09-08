@@ -1,6 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-};
+	reactStrictMode: true,
+	images: { domains: ['localhost', 'i.ytimg.com'] },
+	env: {
+		APP_URL: process.env.REACT_APP_URL,
+		APP_ENV: process.env.REACT_APP_ENV,
+	},
+}
 
-export default nextConfig;
+export default nextConfig
