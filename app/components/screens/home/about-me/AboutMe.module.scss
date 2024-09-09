@@ -1,0 +1,20 @@
+.me {
+	@apply mt-40 mb-6 flex flex-col items-center bg-zinc-900 relative;
+
+	.image-wrapper {
+		@apply mb-6;
+
+		.image {
+			@apply rounded-full;
+			margin-top: -3rem !important;
+		}
+	}
+
+	.heading {
+		@apply flex mb-5 text-3xl font-semibold text-white;
+
+		> span {
+			@apply mr-2;
+		}
+	}
+}
