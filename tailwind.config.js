@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 
-const primaryColor = '#FF3850'
+const primaryColor = '#FFFFFF'
 const bgColor = '#111012'
 
 module.exports = {
