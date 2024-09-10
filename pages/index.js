@@ -1,5 +1,6 @@
 import Home from '@/app/components/screens/home/Home'
 import { API_URL } from '@/app/constants'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import axios from 'axios'
 
 // import localFont from 'next/font/local'
@@ -15,8 +16,20 @@ import axios from 'axios'
 // 	weight: '100 900',
 // })
 
+const queryClient = new QueryClient({
+	defaultOptions: {
+		queries: {
+			refetchOnWindowFocus: false,
+		},
+	},
+})
+
 export default function HomePage(props) {
-	return <Home {...props} />
+	return (
+		<QueryClientProvider client={queryClient} contextSharing={true}>
+			<Home {...props} />
+		</QueryClientProvider>
+	)
 }
 
 export const getStaticProps = async () => {
