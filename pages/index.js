@@ -34,11 +34,11 @@ export default function HomePage(props) {
 
 export const getStaticProps = async () => {
 	const links = await axios.get(`${API_URL}/links`).then(({ data }) => data)
-	const me = await axios.get(`${API_URL}/me`).then(({ data }) => data)
+	const about = await axios.get(`${API_URL}/about`).then(({ data }) => data)
 	return {
 		props: {
 			links,
-			me,
+			about,
 		},
 		revalidate: 60,
 	}

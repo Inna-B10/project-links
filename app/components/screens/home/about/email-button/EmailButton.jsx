@@ -4,7 +4,7 @@ import styles from './EmailButton.module.scss'
 
 const EmailButton = () => {
 	return (
-		<div className={styles.button}>
+		<div className={styles.emailBtn}>
 			<a
 				href='mailto:123@gmail.com'
 				target='_blank'
@@ -14,8 +14,8 @@ const EmailButton = () => {
 					<Image
 						src={`${APP_URL}/icons/email.svg`}
 						alt=''
-						height={18}
-						width={18}
+						height={24}
+						width={24}
 					/>
 				</span>
 				<span>Email</span>

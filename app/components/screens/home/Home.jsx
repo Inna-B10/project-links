@@ -1,16 +1,16 @@
 import Circles from '../../ui/circles/Circles'
 import MetaTitle from '../../ui/MetaTitle'
-import AboutMe from './about-me/AboutMe'
+import About from './about/About'
 import Grid from './grid/Grid'
 import styles from './Home.module.scss'
 import RecentVideos from './recent-videos/RecentVideos'
 
-const Home = ({ links, me }) => {
+const Home = ({ links, about }) => {
 	return (
 		<section className={styles.section}>
 			<MetaTitle title='Project: Links' />
 			<div className={styles.container}>
-				<AboutMe me={me} />
+				<About about={about} />
 				<RecentVideos />
 				<Grid links={links} />
 			</div>
