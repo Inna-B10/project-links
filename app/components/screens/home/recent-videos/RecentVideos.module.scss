@@ -1,6 +1,7 @@
 .videoWrapper {
-	@apply bg-zinc-900 p-3 text-white flex items-center flex-wrap;
+	@apply bg-zinc-900 p-3 text-white flex items-center justify-between flex-wrap;
 	min-height: 70px;
+
 	.heading {
 		@apply text-white text-lg inline-block mr-6;
 	}
@@ -18,7 +19,7 @@
 		@apply mr-3;
 	}
 
-	> span {
-		@apply text-white truncate;
-	}
+	// > span {
+	// 	@apply text-white truncate;
+	// }
 }

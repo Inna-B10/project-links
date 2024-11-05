@@ -1,5 +1,6 @@
 .parent {
-	@apply mt-2 ml-2;
+
+	// @apply mt-2 ml-2;
 	> button {
 		@apply relative flex items-center cursor-pointer border-none outline-none bg-bgColor hover:bg-black transition-colors py-2 px-4 text-white;
 		font-size: 18px;
@@ -12,13 +13,12 @@
 			@apply bg-black;
 		}
 	}
+
 	> article {
 		@apply absolute left-2 top-[52px] bg-bgColor text-white text-sm px-4 text-left z-20;
-
 		height: 0%;
 		overflow: hidden;
 		animation: fadeInBlock 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-
 		width: 28rem;
 		box-shadow: 0 3px 6px rgba(0, 0, 0, 0.8);
 
@@ -34,6 +34,7 @@
 	0% {
 		height: 0%;
 	}
+
 	100% {
 		height: 330px;
 	}
@@ -44,6 +45,7 @@
 		opacity: 0;
 		transform: translateY(40px);
 	}
+
 	100% {
 		opacity: 1;
 		transform: translateY(0);

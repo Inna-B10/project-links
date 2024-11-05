@@ -8,7 +8,7 @@ const VideoItem = ({ item }) => {
 			rel='noreferrer'
 			className={styles.videoItem}>
 			{/* eslint-disable-next-line @next/next/no-img-element*/}
-			<img src={item.thumbnail} alt={item.title} width={70} />
+			<img src={item.thumbnail} alt={item.title} width={238} />
 			<span>{item.title}</span>
 		</a>
 	)

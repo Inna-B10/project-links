@@ -21,7 +21,7 @@ const parseFirstVideo = async name => {
 		'","thumbnail":'
 	)
 
-	const thumbnail = getString(result, '{"thumbnails":[{"url":"', '","width"')
+	const thumbnail = getString(result, '{"thumbnails":[{"url":"', '?sqp=')
 
 	return { title, videoId, thumbnail }
 }
