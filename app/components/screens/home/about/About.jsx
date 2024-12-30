@@ -10,7 +10,7 @@ const About = ({ about }) => {
 			<AboutButton description={about.description} />
 			<div className={styles['image-wrapper']}>
 				<Image
-					src={`${APP_URL}${about.avatar}`}
+					src={`${APP_URL}/${about.avatar}`}
 					width={190}
 					height={190}
 					className={styles.image}
