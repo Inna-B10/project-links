@@ -1,19 +1,19 @@
 /** @type {import('next').NextConfig} */
+
+const isDev = process.env.NODE_ENV === 'development'
+
 const nextConfig = {
 	reactStrictMode: true,
 	images: {
-		remotePatterns: [
-			{ protocol: 'https', hostname: 'project-links-innab10.netlify.app' },
-		],
+		remotePatterns: isDev
+			? [{ protocol: 'http', hostname: 'localhost' }]
+			: [{ protocol: 'https', hostname: 'project-links-innab10.netlify.app' }],
 	},
-	// images: { remotePatterns: [{ protocol: 'http', hostname: 'localhost' }] },
+
 	env: {
 		APP_URL: process.env.REACT_APP_URL,
 		APP_ENV: process.env.REACT_APP_ENV,
 		NEXT_PUBLIC_URL: process.env.REACT_APP_URL,
-
-		// APP_URL: process.env.NEXT_PUBLIC_URL,
-		// APP_ENV: process.env.NEXT_PUBLIC_ENV,
 	},
 }
 

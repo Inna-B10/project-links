@@ -15,7 +15,7 @@
 	}
 
 	> article {
-		@apply absolute left-2 top-[52px] bg-bgColor text-white text-sm px-4 text-left z-20;
+		@apply absolute left-[12px] top-[52px] bg-bgColor text-white text-sm px-4 text-left z-20;
 		height: 0%;
 		overflow: hidden;
 		animation: fadeInBlock 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
