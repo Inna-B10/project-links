@@ -10,7 +10,7 @@ const nextConfig = {
 	env: {
 		APP_URL: process.env.REACT_APP_URL,
 		APP_ENV: process.env.REACT_APP_ENV,
-		NEXT_PUBLIC_API_URL: `${process.env.REACT_APP_URL}`,
+		NEXT_PUBLIC_URL: process.env.REACT_APP_URL,
 
 		// APP_URL: process.env.NEXT_PUBLIC_URL,
 		// APP_ENV: process.env.NEXT_PUBLIC_ENV,
