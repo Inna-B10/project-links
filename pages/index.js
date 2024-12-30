@@ -33,13 +33,28 @@ export default function HomePage(props) {
 }
 
 export const getStaticProps = async () => {
-	const links = await axios.get(`${API_URL}/links`).then(({ data }) => data)
-	const about = await axios.get(`${API_URL}/about`).then(({ data }) => data)
-	return {
-		props: {
-			links,
-			about,
-		},
-		revalidate: 60,
+	try {
+		const links = await axios.get(`${API_URL}/links`).then(({ data }) => data)
+		const about = await axios.get(`${API_URL}/about`).then(({ data }) => {
+			if (!data || !data.description) {
+				throw new Error('Invalid about data')
+			}
+			return data
+		})
+		return {
+			props: {
+				links,
+				about,
+			},
+			revalidate: 60,
+		}
+	} catch (error) {
+		console.error('Error fetching data:', error.message)
+		return {
+			props: {
+				links: [],
+				about: { description: 'Default description or fallback message' },
+			},
+		}
 	}
 }
